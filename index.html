@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bank Account Form</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+	<script src="application.js"></script>
+	
+</head>
+<body>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-4" style="border: 4px solid black; padding: 15px;margin: 15px;">
+					<h3 class="text-center" style="text-decoration: underline;"><b class="text-danger">Bank Account Opening Form</b></h3>
+					<br>
+					<div class="form-group">
+						<label>Select Bank</label>
+
+						<select class="form-control" id="selectlist" >
+							<option>Select Bank</option>
+							<option>Axis Bank</option>
+							<option>ICICI Bank</option>
+							<option>Yes Bank</option>
+							<option>Stat Bank</option>
+						</select>
+						<i id="selectlisterror"></i>
+					</div>
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" class="form-control" name="" placeholder="Enter Your Name" id="name">
+						<i id="nameerror"></i>
+					</div>
+					<div class="form-group">
+						<label>Phone Number</label>
+						<input type="text" class="form-control" name="" placeholder="Enter Your Phone Number" id="pno">
+						<i id="pnoerror"></i>
+						<div id="pnoerror1"></div>
+					</div>
+					<div class="form-group">
+						<label>Date Of Birth</label>
+						<input type="date" class="form-control" name="" id="dob" >
+						<i id="doberror"></i>
+						<p id="doberror1"></p>
+					</div>
+					<div class="form-group">
+						<label>Gender</label> 
+						<input type="radio" name="gender" id="male" value="m"> Male
+						<input type="radio" name="gender" id="female" value="f"> Female
+						<i id="gendererror"></i>
+					</div>
+					<div class="text-center">
+						<button class="btn btn-primary" type="submit" onclick="openAccount()">Open Account</button>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+</body>
+</html>
