@@ -10,37 +10,19 @@ function openAccount()
 	var genderMale=document.getElementById("male").checked;
 	var genderFemale=document.getElementById("female").checked;
 
-	
-
-	
-	console.log(bankName);
-	console.log(personName);
-	console.log(phoneNumber);
-	console.log(dob);
 	if (genderMale==true)
 	{
-		console.log("male");
 	}
 	if (genderFemale==true)
-	{
-		console.log("female");
+	{	
 	}
-	//console.log(genderMale);
-	//console.log(genderFemale);
 	
-
 	var currentDate= new Date();
-	//console.log(currentDate);
 	var currentDateString = currentDate.toString();
-	console.log(currentDateString);
 	year=(parseInt(currentDate.getFullYear())-(parseInt(dob.slice(0,4))));
 	month=(parseInt(currentDate.getMonth()+1)-(parseInt(dob.slice(5,7))));
 	day=(parseInt(currentDate.getDate())-(parseInt(dob.slice(8,10))));
-	console.log(currentDate.getDate()+"----"+dob.slice(8,10));
-	console.log(year);
-	console.log(month);
-	console.log(day);
-
+	console.log(currentDate.getDate()+"----"+dob.slice(8,10));	
 	if (day<0)
 	{
 		month=month-1;
@@ -52,12 +34,7 @@ function openAccount()
 		year=year-1;
 		month=month+12;	
 	}
-
 	var age="age is:"+year+" "+month+" "+day+"";
-	console.log(age);
-
-	
-	
 	bankValidation(bankName,personName,phoneNumber,dob,genderMale,genderFemale);
 	clear();
 }
